@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Presentación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body background="fondo_2.jpg" rightmargin=150 leftmargin=150 topmargin=70>
+    <button id="cambiarFondo">Cambiar Fondo</button>
+    <script>
+        document.getElementById("cambiarFondo").addEventListener("click", function () {
+            document.body.style.backgroundImage = "url('fondo_nuevo.jpeg')";
+        });
+    </script>
+    <button id="restaurarFondo">Restaurar Fondo</button>
+
+    <script>
+        document.getElementById("restaurarFondo").addEventListener("click", function () {
+            document.body.style.backgroundColor = ""; // Restaurar al color original
+            document.body.style.backgroundImage = "url('fondo_2.jpg')"; // Restaurar a la imagen original
+        });
+    </script>
+    <p><strong>NOMBRE:</strong> Janeth Stephanie Hernández Victoriano </p>
+    <p><strong>CARRERA:</strong> Desarrollo de Software Multiplataforma </p>
+    <p><strong>CUATRIMESTRE:</strong> 3 <strong>GRUPO:</strong> B </p>
+    <p><strong>CORREO INSTITUCIONAL:</strong> 20223tn061@utez.edu.mx </p>
+    <p><strong>MATRÍCULA:</strong> 20223TN061 </p>
+    <p><strong>ESTUDIOS:</strong> Técnico en Programación </p>
+    <p id="textoCambiante"><strong>PASATIEMPOS:</strong> Leer, ver pelis y escuchar música</p>
+    <button id="cambiarTexto" onclick="cambiarTexto()">Cambiar Texto</button>
+    <script>
+        function cambiarTexto() {
+            var nuevoTexto = "Aquí van los <strong>pasatiempos </strong>: )";
+            document.getElementById("textoCambiante").innerHTML = nuevoTexto;
+        }
+    </script>
+
+    <br>
+    <br>
+    <img id="imagenCambiante" src="flores.jpg" border="2" height="300" width="400" align="center"><br>
+    <button id="cambiarImagen" onclick="cambiarSrcImagen()">Cambiar Imagen</button>
+    <button id="restaurarImagen" onclick="restaurarSrcImagen()">Restaurar Imagen</button>
+
+    <script>
+        var imagenOriginalSrc = "flores.jpg"; // Almacena el src original de la imagen
+
+        function cambiarSrcImagen() {
+            var nuevaImagenSrc = "nueva_imagen.pNg"; // Cambia esta línea por el src de la nueva imagen
+            document.getElementById("imagenCambiante").src = nuevaImagenSrc;
+        }
+
+        function restaurarSrcImagen() {
+            document.getElementById("imagenCambiante").src = imagenOriginalSrc;
+        }
+    </script>
+
+    <br>
+    <h2 id="mensaje">Hola mundo</h2>
+    <button id="ocultarBoton" onclick="ocultarMensaje()">Ocultar Mensaje</button>
+    <script>
+        function ocultarMensaje() {
+            var mensajeElemento = document.getElementById("mensaje");
+            mensajeElemento.style.display = "none";
+        }
+    </script>
+
+    <div id="miDiv"></div>
+    <button onclick="elTexto()">Texto</button>
+    <script>
+        function elTexto() {
+            var divElemento = document.getElementById("miDiv");
+            divElemento.innerHTML = "<h1>Este texto no lo escribió Janeth Hernández, lo escribió JavaScript</h1>";
+        }
+    </script>
+</body>
+
+</html>
