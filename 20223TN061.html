@@ -19,7 +19,6 @@
 
     <script>
         document.getElementById("restaurarFondo").addEventListener("click", function () {
-            document.body.style.backgroundColor = ""; // Restaurar al color original
             document.body.style.backgroundImage = "url('fondo_2.jpg')"; // Restaurar a la imagen original
         });
     </script>
@@ -48,7 +47,7 @@
         var imagenOriginalSrc = "flores.jpg"; // Almacena el src original de la imagen
 
         function cambiarSrcImagen() {
-            var nuevaImagenSrc = "nueva_imagen.pNg"; // Cambia esta línea por el src de la nueva imagen
+            var nuevaImagenSrc = "nueva_imagen.png"; // Cambia esta línea por el src de la nueva imagen
             document.getElementById("imagenCambiante").src = nuevaImagenSrc;
         }
 
